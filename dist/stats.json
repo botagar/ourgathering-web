@@ -1,0 +1,237 @@
+{
+  "name": "client",
+  "hash": "fe1701a99fa1ece55c6e",
+  "publicPath": "/",
+  "outputPath": "/home/jgeddes/dev/ourgathering/web/dist",
+  "assetsByChunkName": {
+    "main": [
+      "main.e70eea607bca8acbd731.js",
+      "main.de9e38243b28dcbcc114.hot-update.js"
+    ],
+    "vendors": [
+      "vendors.d95a0863d262e001caab.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "asset",
+      "name": "vendors.d95a0863d262e001caab.js",
+      "size": 2240694,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "chunkhash": "d95a0863d262e001caab",
+        "javascriptModule": false
+      },
+      "chunkNames": [
+        "vendors"
+      ],
+      "chunkIdHints": [
+        "vendor"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "vendors"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "images/ww-d4321fcbfed495af96a3.jpg",
+      "size": 307073,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/backgrounds/ww.jpg",
+        "immutable": true,
+        "contenthash": "d4321fcbfed495af96a3"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        "main"
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "images/logo-a511e6c063e16a634241.jpg",
+      "size": 154148,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/logo.jpg",
+        "immutable": true,
+        "contenthash": "a511e6c063e16a634241"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        "main"
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "main.e70eea607bca8acbd731.js",
+      "size": 75366,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "chunkhash": "e70eea607bca8acbd731",
+        "javascriptModule": false
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "main"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.de9e38243b28dcbcc114.hot-update.js",
+      "size": 4116,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "de9e38243b28dcbcc114"
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "main"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "src_serviceWorker_ts.0f3ba810c609d7040014.js",
+      "size": 1154,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "chunkhash": "0f3ba810c609d7040014",
+        "javascriptModule": false
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "src_serviceWorker_ts"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "index.html",
+      "size": 892,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.de9e38243b28dcbcc114.hot-update.json",
+      "size": 28,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "de9e38243b28dcbcc114"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
+    }
+  ],
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        "vendors",
+        "main"
+      ],
+      "assets": [
+        {
+          "name": "vendors.d95a0863d262e001caab.js"
+        },
+        {
+          "name": "main.e70eea607bca8acbd731.js"
+        },
+        {
+          "name": "main.de9e38243b28dcbcc114.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 2,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "main",
+      "files": [
+        "main.e70eea607bca8acbd731.js",
+        "main.de9e38243b28dcbcc114.hot-update.js"
+      ]
+    },
+    {
+      "id": "src_serviceWorker_ts",
+      "files": [
+        "src_serviceWorker_ts.0f3ba810c609d7040014.js"
+      ]
+    },
+    {
+      "id": "vendors",
+      "files": [
+        "vendors.d95a0863d262e001caab.js"
+      ]
+    }
+  ]
+}
