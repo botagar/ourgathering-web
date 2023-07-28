@@ -1,28 +1,28 @@
 {
   "name": "client",
-  "hash": "fe1701a99fa1ece55c6e",
+  "hash": "8e2fa99e7183d1410cd5",
   "publicPath": "/",
   "outputPath": "/home/jgeddes/dev/ourgathering/web/dist",
   "assetsByChunkName": {
     "main": [
-      "main.e70eea607bca8acbd731.js",
-      "main.de9e38243b28dcbcc114.hot-update.js"
+      "main.45bde56f629d2d9be8af.js",
+      "main.480670659ac002bf73ae.hot-update.js"
     ],
     "vendors": [
-      "vendors.d95a0863d262e001caab.js"
+      "vendors.78385b3333035eb206dc.js"
     ]
   },
   "assets": [
     {
       "type": "asset",
-      "name": "vendors.d95a0863d262e001caab.js",
-      "size": 2240694,
+      "name": "vendors.78385b3333035eb206dc.js",
+      "size": 2244768,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "immutable": true,
-        "chunkhash": "d95a0863d262e001caab",
+        "chunkhash": "78385b3333035eb206dc",
         "javascriptModule": false
       },
       "chunkNames": [
@@ -37,6 +37,29 @@
         "vendors"
       ],
       "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "fonts/Montserrat-VariableFont_wght-3faa3eef13649db02044.ttf",
+      "size": 394140,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/fonts/en/Montserrat/Montserrat-VariableFont_wght.ttf",
+        "immutable": true,
+        "contenthash": "3faa3eef13649db02044"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        "main"
+      ]
     },
     {
       "type": "asset",
@@ -86,14 +109,14 @@
     },
     {
       "type": "asset",
-      "name": "main.e70eea607bca8acbd731.js",
-      "size": 75366,
+      "name": "main.45bde56f629d2d9be8af.js",
+      "size": 80653,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "immutable": true,
-        "chunkhash": "e70eea607bca8acbd731",
+        "chunkhash": "45bde56f629d2d9be8af",
         "javascriptModule": false
       },
       "chunkNames": [
@@ -109,15 +132,38 @@
     },
     {
       "type": "asset",
-      "name": "main.de9e38243b28dcbcc114.hot-update.js",
-      "size": 4116,
+      "name": "images/down_chevron-7e74ee999b88fb487c61.png",
+      "size": 9241,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/down_chevron.png",
+        "immutable": true,
+        "contenthash": "7e74ee999b88fb487c61"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        "main"
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "main.480670659ac002bf73ae.hot-update.js",
+      "size": 5514,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "hotModuleReplacement": true,
         "immutable": true,
-        "fullhash": "de9e38243b28dcbcc114"
+        "fullhash": "480670659ac002bf73ae"
       },
       "chunkNames": [
         "main"
@@ -168,7 +214,7 @@
     },
     {
       "type": "asset",
-      "name": "main.de9e38243b28dcbcc114.hot-update.json",
+      "name": "main.480670659ac002bf73ae.hot-update.json",
       "size": 28,
       "emitted": false,
       "comparedForEmit": false,
@@ -176,7 +222,7 @@
       "info": {
         "hotModuleReplacement": true,
         "immutable": true,
-        "fullhash": "de9e38243b28dcbcc114"
+        "fullhash": "480670659ac002bf73ae"
       },
       "chunkNames": [],
       "chunkIdHints": [],
@@ -195,18 +241,18 @@
       ],
       "assets": [
         {
-          "name": "vendors.d95a0863d262e001caab.js"
+          "name": "vendors.78385b3333035eb206dc.js"
         },
         {
-          "name": "main.e70eea607bca8acbd731.js"
+          "name": "main.45bde56f629d2d9be8af.js"
         },
         {
-          "name": "main.de9e38243b28dcbcc114.hot-update.js"
+          "name": "main.480670659ac002bf73ae.hot-update.js"
         }
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 2,
+      "filteredAuxiliaryAssets": 4,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -217,8 +263,8 @@
     {
       "id": "main",
       "files": [
-        "main.e70eea607bca8acbd731.js",
-        "main.de9e38243b28dcbcc114.hot-update.js"
+        "main.45bde56f629d2d9be8af.js",
+        "main.480670659ac002bf73ae.hot-update.js"
       ]
     },
     {
@@ -230,7 +276,7 @@
     {
       "id": "vendors",
       "files": [
-        "vendors.d95a0863d262e001caab.js"
+        "vendors.78385b3333035eb206dc.js"
       ]
     }
   ]
