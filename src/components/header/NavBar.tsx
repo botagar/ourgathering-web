@@ -8,27 +8,43 @@ const NavBar: FC = (): ReactElement => {
   return (
     <NavList>
       <NavLinkContainer>
-        <Link to='/help'>
+        <NavLink to='/help'>
           Tutorials
-        </Link>
+        </NavLink>
       </NavLinkContainer>
       <NavLinkContainer>
-        <Link to='/help'>
+        <NavLink to='/help'>
           Help
-        </Link>
+        </NavLink>
       </NavLinkContainer>
     </NavList>
   )
 }
 
 const NavList = styled.ul`
-  /* background-color: blue; */
-  
   display: flex;
   list-style: none;
+  align-items: center;
 `
 const NavLinkContainer = styled.li`
-  /* background-color: green; */
+  border: 2px solid black;
+  border-radius: 5px;
+  background: white;
   margin-left: 10px;
+  padding: 5px 10px;
+
+  transition-duration: 0.4s;
+
+  &:hover {
+    background-color: rgb(12, 100, 115);
+
+    a {
+      color: white;
+    }
+  }
+`
+const NavLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `
 export { NavBar }

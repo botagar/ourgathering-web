@@ -7,6 +7,7 @@ import { loadableReady } from '@loadable/component'
 import { App } from './App'
 
 import { USE_SERVICE_WORKER } from 'constants/commonConstants'
+import 'i18n/Translations'
 
 if (
   USE_SERVICE_WORKER &&

@@ -8,8 +8,8 @@ const Header: FC = (): ReactElement => {
   console.log('Hi')
 
   return (
-    <HeaderRow aria-role='banner'>
-      <Logo src={LogoImage} alt='logo' aria-role='img' />
+    <HeaderRow aria-role='Banner'>
+      <Logo src={LogoImage} alt='logo' />
       <NavBar />
     </HeaderRow>
   )
@@ -17,13 +17,12 @@ const Header: FC = (): ReactElement => {
 
 const HeaderRow = styled.div`
   display: flex;
-  height: 10em;
-  max-height: 5vh;
+  height: 5em;
 `
 const Logo = styled.img`
   display: block;
-  max-width:230px;
-  max-height:95px;
+  max-width: 230px;
+  max-height: 230px;
   width: auto;
   height: auto;
 `

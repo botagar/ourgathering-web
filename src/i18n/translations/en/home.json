@@ -1,0 +1,11 @@
+{
+    "hero_text": "Get Started!",
+    "step_1": "Step 1",
+    "step_1_instruction": "Register with your email or phone number.",
+    "step_1_input_placeholder": "Your email or phone number here",
+    "step_1_register": "Register",
+    "step_2": "Step 2",
+    "step_2_instruction": "Click the authentication link sent to you.",
+    "step_3": "Step 3",
+    "step_3_instruction": "Create a Gathering!"
+}
