@@ -1,20 +1,21 @@
 import { FC, ReactElement } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 
 const NavBar: FC = (): ReactElement => {
-  console.log('Hi')
+  const { t } = useTranslation()
 
   return (
     <NavList>
       <NavLinkContainer>
         <NavLink to='/help'>
-          Tutorials
+          {t('header:nav_tutorials')}
         </NavLink>
       </NavLinkContainer>
       <NavLinkContainer>
         <NavLink to='/help'>
-          Help
+          {t('header:nav_help')}
         </NavLink>
       </NavLinkContainer>
     </NavList>
@@ -32,6 +33,9 @@ const NavLinkContainer = styled.li`
   background: white;
   margin-left: 10px;
   padding: 5px 10px;
+  min-width: 80px;
+  width: 6.5vw;
+  text-align: center;
 
   transition-duration: 0.4s;
 

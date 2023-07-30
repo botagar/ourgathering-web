@@ -1,5 +1,6 @@
 import { FC, ReactElement } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 import LogoImage from 'src/static/logo.jpg'
 import { NavBar } from './NavBar'
@@ -9,7 +10,9 @@ const Header: FC = (): ReactElement => {
 
   return (
     <HeaderRow aria-role='Banner'>
-      <Logo src={LogoImage} alt='logo' />
+      <LogoLink to='/'>
+        <Logo src={LogoImage} alt='logo' />
+      </LogoLink>
       <NavBar />
     </HeaderRow>
   )
@@ -25,6 +28,10 @@ const Logo = styled.img`
   max-height: 230px;
   width: auto;
   height: auto;
+`
+const LogoLink = styled(Link)`
+  display: flex;
+  width: 85px;
 `
 
 export { Header }
