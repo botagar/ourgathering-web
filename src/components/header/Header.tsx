@@ -6,8 +6,6 @@ import LogoImage from 'src/static/logo.jpg'
 import { NavBar } from './NavBar'
 
 const Header: FC = (): ReactElement => {
-  console.log('Hi')
-
   return (
     <HeaderRow aria-role='Banner'>
       <LogoLink to='/'>
