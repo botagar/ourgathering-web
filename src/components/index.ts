@@ -3,3 +3,6 @@ export { LanguagePickerBar } from 'components/language-picker-bar/LanguagePicker
 export { Footer } from 'components/footer/Footer'
 export { Header } from 'components/header/Header'
 export { AppStyles } from 'components/app-styles/AppStyles'
+export { NewGathering } from 'components/gathering/NewGathering'
+export { GatheringOverview } from 'components/gathering/GatheringOverview'
+export type { GatheringOverviewData, LocationOverviewData } from 'components/gathering/GatheringOverview'

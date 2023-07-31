@@ -27,7 +27,7 @@ const App: FC = (): ReactElement => {
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 
   background: url(${background}) no-repeat center center fixed;
   background-size: cover;

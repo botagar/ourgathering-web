@@ -3,13 +3,15 @@ import { initReactI18next } from 'react-i18next'
 
 import en_header from './translations/en/header.json'
 import en_home from './translations/en/home.json'
+import en_manage from './translations/en/manage.json'
 
 const resources = {
   en: {
     translation: {},
     header: en_header,
     footer: {},
-    home: en_home
+    home: en_home,
+    manage: en_manage
   }
 }
 
