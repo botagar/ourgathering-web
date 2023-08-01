@@ -1,0 +1,289 @@
+{
+  "name": "client",
+  "hash": "98febb74f38f0a810320",
+  "publicPath": "/",
+  "outputPath": "/home/jgeddes/dev/ourgathering/web/dist",
+  "assetsByChunkName": {
+    "main": [
+      "main.4c6f8923a49b07712d50.js"
+    ],
+    "vendors": [
+      "vendors.e956a783f5baaad25f09.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "asset",
+      "name": "images/night_full_moon-15aba106b42ca6d8f019.png",
+      "size": 1543632,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/backgrounds/night_full_moon.png",
+        "immutable": true,
+        "contenthash": "15aba106b42ca6d8f019"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        179
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "fonts/Montserrat-VariableFont_wght-3faa3eef13649db02044.ttf",
+      "size": 394140,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/fonts/en/Montserrat/Montserrat-VariableFont_wght.ttf",
+        "immutable": true,
+        "contenthash": "3faa3eef13649db02044"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        179
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "vendors.e956a783f5baaad25f09.js",
+      "size": 282449,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "chunkhash": "e956a783f5baaad25f09",
+        "javascriptModule": false,
+        "minimized": true,
+        "related": {
+          "license": "vendors.e956a783f5baaad25f09.js.LICENSE.txt"
+        }
+      },
+      "chunkNames": [
+        "vendors"
+      ],
+      "chunkIdHints": [
+        "vendor"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        216
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "images/logo-a511e6c063e16a634241.jpg",
+      "size": 154148,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/logo.jpg",
+        "immutable": true,
+        "contenthash": "a511e6c063e16a634241"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        179
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "images/earth-f8859dc6b5e803b15b90.png",
+      "size": 29022,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/earth.png",
+        "immutable": true,
+        "contenthash": "f8859dc6b5e803b15b90"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        179
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "main.4c6f8923a49b07712d50.js",
+      "size": 18168,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "chunkhash": "4c6f8923a49b07712d50",
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        179
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "images/laptop-e93f1f319eec1b956fb0.png",
+      "size": 10520,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/laptop.png",
+        "immutable": true,
+        "contenthash": "e93f1f319eec1b956fb0"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        179
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "images/down_chevron-7e74ee999b88fb487c61.png",
+      "size": 9241,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "sourceFilename": "src/static/down_chevron.png",
+        "immutable": true,
+        "contenthash": "7e74ee999b88fb487c61"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [
+        "main"
+      ],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": [
+        179
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "index.html",
+      "size": 758,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "481.b48717e18f75e9f5d57f.js",
+      "size": 507,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "immutable": true,
+        "chunkhash": "b48717e18f75e9f5d57f",
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        481
+      ],
+      "auxiliaryChunks": []
+    }
+  ],
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        216,
+        179
+      ],
+      "assets": [
+        {
+          "name": "vendors.e956a783f5baaad25f09.js"
+        },
+        {
+          "name": "main.4c6f8923a49b07712d50.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 6,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": 179,
+      "files": [
+        "main.4c6f8923a49b07712d50.js"
+      ]
+    },
+    {
+      "id": 481,
+      "files": [
+        "481.b48717e18f75e9f5d57f.js"
+      ]
+    },
+    {
+      "id": 216,
+      "files": [
+        "vendors.e956a783f5baaad25f09.js"
+      ]
+    }
+  ]
+}
