@@ -18,6 +18,16 @@ const NavBar: FC = (): ReactElement => {
           {t('header:nav_help')}
         </NavLink>
       </NavLinkContainer>
+      <NavLinkContainer>
+        <NavLink to='/gathering/gatheringid/testid/authtoken'>
+          test gathering
+        </NavLink>
+      </NavLinkContainer>
+      <NavLinkContainer>
+        <NavLink to='/manage/testid/authtoken'>
+          test overview
+        </NavLink>
+      </NavLinkContainer>
     </NavList>
   )
 }
