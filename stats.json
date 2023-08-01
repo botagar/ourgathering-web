@@ -1,11 +1,11 @@
 {
   "name": "client",
-  "hash": "58e8e924c897afddd2bc",
+  "hash": "8949df72c20bd3836ad4",
   "publicPath": "/ourgathering-web",
   "outputPath": "/home/jgeddes/dev/ourgathering/web/dist",
   "assetsByChunkName": {
     "main": [
-      "main.315b701dd1a0c960514b.js"
+      "main.7339ed03f1bf18fc86db.js"
     ],
     "vendors": [
       "vendors.e956a783f5baaad25f09.js"
@@ -136,14 +136,14 @@
     },
     {
       "type": "asset",
-      "name": "main.315b701dd1a0c960514b.js",
-      "size": 18420,
+      "name": "main.7339ed03f1bf18fc86db.js",
+      "size": 18417,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "immutable": true,
-        "chunkhash": "315b701dd1a0c960514b",
+        "chunkhash": "7339ed03f1bf18fc86db",
         "javascriptModule": false,
         "minimized": true
       },
@@ -254,7 +254,7 @@
           "name": "vendors.e956a783f5baaad25f09.js"
         },
         {
-          "name": "main.315b701dd1a0c960514b.js"
+          "name": "main.7339ed03f1bf18fc86db.js"
         }
       ],
       "filteredAssets": 0,
@@ -270,7 +270,7 @@
     {
       "id": 179,
       "files": [
-        "main.315b701dd1a0c960514b.js"
+        "main.7339ed03f1bf18fc86db.js"
       ]
     },
     {
