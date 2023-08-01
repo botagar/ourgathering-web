@@ -1,11 +1,11 @@
 {
   "name": "client",
-  "hash": "32d2d86960aa5e6a55e7",
-  "publicPath": "/",
+  "hash": "58e8e924c897afddd2bc",
+  "publicPath": "/ourgathering-web",
   "outputPath": "/home/jgeddes/dev/ourgathering/web/dist",
   "assetsByChunkName": {
     "main": [
-      "main.7839f605cdae4483b56b.js"
+      "main.315b701dd1a0c960514b.js"
     ],
     "vendors": [
       "vendors.e956a783f5baaad25f09.js"
@@ -136,14 +136,14 @@
     },
     {
       "type": "asset",
-      "name": "main.7839f605cdae4483b56b.js",
-      "size": 18404,
+      "name": "main.315b701dd1a0c960514b.js",
+      "size": 18420,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "immutable": true,
-        "chunkhash": "7839f605cdae4483b56b",
+        "chunkhash": "315b701dd1a0c960514b",
         "javascriptModule": false,
         "minimized": true
       },
@@ -207,7 +207,7 @@
     {
       "type": "asset",
       "name": "index.html",
-      "size": 758,
+      "size": 792,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -254,7 +254,7 @@
           "name": "vendors.e956a783f5baaad25f09.js"
         },
         {
-          "name": "main.7839f605cdae4483b56b.js"
+          "name": "main.315b701dd1a0c960514b.js"
         }
       ],
       "filteredAssets": 0,
@@ -270,7 +270,7 @@
     {
       "id": 179,
       "files": [
-        "main.7839f605cdae4483b56b.js"
+        "main.315b701dd1a0c960514b.js"
       ]
     },
     {
