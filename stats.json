@@ -1,14 +1,14 @@
 {
   "name": "client",
-  "hash": "98febb74f38f0a810320",
+  "hash": "6b4816b4b8fdd8458bdf",
   "publicPath": "/",
   "outputPath": "/home/jgeddes/dev/ourgathering/web/dist",
   "assetsByChunkName": {
     "main": [
-      "main.4c6f8923a49b07712d50.js"
+      "main.240e838c41ac52c100c8.js"
     ],
     "vendors": [
-      "vendors.e956a783f5baaad25f09.js"
+      "vendors.c0f2081a01e2b4312c40.js"
     ]
   },
   "assets": [
@@ -60,18 +60,18 @@
     },
     {
       "type": "asset",
-      "name": "vendors.e956a783f5baaad25f09.js",
-      "size": 282449,
+      "name": "vendors.c0f2081a01e2b4312c40.js",
+      "size": 282748,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "immutable": true,
-        "chunkhash": "e956a783f5baaad25f09",
+        "chunkhash": "c0f2081a01e2b4312c40",
         "javascriptModule": false,
         "minimized": true,
         "related": {
-          "license": "vendors.e956a783f5baaad25f09.js.LICENSE.txt"
+          "license": "vendors.c0f2081a01e2b4312c40.js.LICENSE.txt"
         }
       },
       "chunkNames": [
@@ -136,14 +136,14 @@
     },
     {
       "type": "asset",
-      "name": "main.4c6f8923a49b07712d50.js",
-      "size": 18168,
+      "name": "main.240e838c41ac52c100c8.js",
+      "size": 18372,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "immutable": true,
-        "chunkhash": "4c6f8923a49b07712d50",
+        "chunkhash": "240e838c41ac52c100c8",
         "javascriptModule": false,
         "minimized": true
       },
@@ -251,10 +251,10 @@
       ],
       "assets": [
         {
-          "name": "vendors.e956a783f5baaad25f09.js"
+          "name": "vendors.c0f2081a01e2b4312c40.js"
         },
         {
-          "name": "main.4c6f8923a49b07712d50.js"
+          "name": "main.240e838c41ac52c100c8.js"
         }
       ],
       "filteredAssets": 0,
@@ -270,7 +270,7 @@
     {
       "id": 179,
       "files": [
-        "main.4c6f8923a49b07712d50.js"
+        "main.240e838c41ac52c100c8.js"
       ]
     },
     {
@@ -282,7 +282,7 @@
     {
       "id": 216,
       "files": [
-        "vendors.e956a783f5baaad25f09.js"
+        "vendors.c0f2081a01e2b4312c40.js"
       ]
     }
   ]
