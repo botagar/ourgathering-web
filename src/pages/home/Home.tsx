@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 
 import DownChevronImage from 'src/static/down_chevron.png'
+import { GlassPanel } from 'components/generic/GlassPanel'
 
 const Home: FC = (): ReactElement => {
   const { t } = useTranslation()
@@ -31,14 +32,12 @@ const Home: FC = (): ReactElement => {
   )
 }
 
-const HomePage = styled.div`
-  display: flex;
+const HomePage = styled(GlassPanel)`
   flex-direction: column;
   flex: 0 0 90vh;
   align-items: center;
-  margin: 1em 5em;
+  margin: 1em 15vw;
   padding: 1em;
-  background-color: rgba(255,255,255,0.8);
 `
 const InstructionalStep = styled.div`
   display: flex;

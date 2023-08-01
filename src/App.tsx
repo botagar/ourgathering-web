@@ -4,7 +4,7 @@ import { useRoutes } from 'react-router-dom'
 import { routes } from 'router/Router'
 import styled, { ThemeProvider } from 'styled-components'
 
-import background from './static/backgrounds/ww.jpg'
+import background from './static/backgrounds/night_full_moon.png'
 
 const App: FC = (): ReactElement => {
   const page = useRoutes(routes)

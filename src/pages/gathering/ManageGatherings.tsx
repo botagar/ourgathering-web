@@ -5,14 +5,8 @@ import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import { NewGathering, GatheringOverviewData, GatheringOverview } from 'components'
 import useSWR from 'swr'
-import { stubData } from './StubData'
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
-async function request<TResponse> (url: string, config: RequestInit = {}): Promise<TResponse> {
-  return await fetch(url, config)
-    .then(async (response) => await response.json())
-    .then((data) => data as TResponse)
-}
+import { stubData } from './ManageStubData'
+import { createFetcher } from './swcFetcher'
 
 interface OverviewPageData {
   metadata: { activeGatherings: number, maxGatherings: number }
@@ -27,14 +21,7 @@ const ManageGatherings: FC = (): ReactElement => {
   const [metadata, setMetadata] = useState({ activeGatherings: 0, maxGatherings: 10 })
   const [gatherings, setGatherings] = useState<GatheringOverviewData[]>([])
 
-  const fetcher = async (path: string): Promise<OverviewPageData> => {
-    // const res = request<GatheringOverview>(path)
-    const stub = stubData()
-    // await new Promise(f => setTimeout(f, 1000))
-    console.log('Waited 1s')
-    const res = Promise.resolve(stub)
-    return await res
-  }
+  const fetcher = createFetcher<OverviewPageData>(stubData(), 500)
   const { data, error, isLoading } = useSWR(`/overview/${ownerId ?? ''}/${authToken ?? ''}`, fetcher)
 
   useEffect(() => {
