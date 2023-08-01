@@ -14,3 +14,4 @@ interface Window {
 }
 
 declare const NO_SSR: boolean
+declare const PUBLIC_URL: string

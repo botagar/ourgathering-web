@@ -36,7 +36,8 @@ const filename = (ext: string): string =>
 const plugins: WebpackPluginInstance[] = [
   new CleanWebpackPlugin(),
   new DefinePlugin({
-    NO_SSR: process.env.NO_SSR === 'true'
+    NO_SSR: process.env.NO_SSR === 'true',
+    PUBLIC_URL: process.env.PUBLIC_URL !== undefined ? `'${process.env.PUBLIC_URL}'` : '\'/\''
   }),
   ...(process.env.NO_SSR === 'true'
     ? [
@@ -76,7 +77,7 @@ const clientConfig: Configuration = {
   output: {
     path: DIST_DIR,
     filename: filename('js'),
-    publicPath: '/'
+    publicPath: process.env.PUBLIC_URL ?? '/'
   },
   devtool: IS_DEV ? 'source-map' : false,
   resolve: {
