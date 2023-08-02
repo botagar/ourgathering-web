@@ -51,7 +51,7 @@ const InstructionalStep = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-	text-align: center;
+  text-align: center;
   margin-bottom: 2em;
   padding: 0.5em;
   width: 80%;

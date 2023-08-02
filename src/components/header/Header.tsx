@@ -19,6 +19,8 @@ const Header: FC = (): ReactElement => {
 const HeaderRow = styled.div`
   display: flex;
   height: 5em;
+
+  @media only screen and (max-width: 820px){}
 `
 const Logo = styled.img`
   display: block;

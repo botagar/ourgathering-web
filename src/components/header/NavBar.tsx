@@ -38,27 +38,34 @@ const NavList = styled.ul`
   align-items: center;
 `
 const NavLinkContainer = styled.li`
-  border: 2px solid black;
-  border-radius: 5px;
-  background: white;
-  margin-left: 10px;
-  padding: 5px 10px;
-  min-width: 80px;
-  width: 6.5vw;
+  display: flex;
   text-align: center;
-
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: 10px;
+  min-width: 70px;
+  max-width: 150px;
+  width: 6.5vw;
+  color: white;
+  
   transition-duration: 0.4s;
 
+  a {
+    padding: 0 5px;
+  }
+  
   &:hover {
-    background-color: rgb(12, 100, 115);
+    background-color: rgba(255, 255, 255, 0.2);
 
     a {
       color: white;
+      font-weight: bold;
     }
   }
 `
 const NavLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: white;
 `
 export { NavBar }
