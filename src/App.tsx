@@ -12,10 +12,9 @@ const App: FC = (): ReactElement => {
   return (
     <ErrorBoundary>
       <ThemeProvider theme={{}}>
+        <AppStyles />
         <AppContainer>
-          <AppStyles />
-          <LanguagePickerBar />
-          <Header />
+          <HeaderRow />
           {page}
           <Footer />
         </AppContainer>
@@ -24,13 +23,26 @@ const App: FC = (): ReactElement => {
   )
 }
 
+const HeaderRow: FC = (): ReactElement =>
+  <HeaderContainer>
+    <LanguagePickerBar />
+    <Header />
+  </HeaderContainer>
+
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
+  justify-content: space-between;
 
   background: url(${background}) no-repeat center center fixed;
   background-size: cover;
+`
+const HeaderContainer = styled.header`
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 `
 
 export { App }

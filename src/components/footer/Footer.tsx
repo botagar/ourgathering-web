@@ -13,10 +13,10 @@ const Footer: FC = (): ReactElement => {
 
 const FooterRow = styled.div`
   display: flex;
+  justify-content: center;
   background-color: black;
   height: 5em;
   max-height: 5vh;
-  justify-content: center;
 `
 const P = styled.p`
     color: white;

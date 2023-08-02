@@ -34,7 +34,6 @@ const Home: FC = (): ReactElement => {
 
 const HomePage = styled(GlassPanel)`
   flex-direction: column;
-  flex: 0 0 90vh;
   align-items: center;
   margin: 1em 22vw;
   padding: 1em;
@@ -43,13 +42,16 @@ const HomePage = styled(GlassPanel)`
     margin: 1em 12vw;
   }
   @media only screen and (max-width: 820px){
-    margin: 1em 8vw;
+    padding: 1em 0;
+    margin: 0;
+    border-radius: 0;
   }
 `
 const InstructionalStep = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+	text-align: center;
   margin-bottom: 2em;
   padding: 0.5em;
   width: 80%;
@@ -58,7 +60,10 @@ const InstructionalStep = styled.div`
   box-shadow: 5px 5px rgba(0,0,0,0.6);
 
   @media only screen and (max-width: 820px){
-    width: 90%;
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 1em;
   }
 `
 const HeroText = styled.h1`
@@ -66,9 +71,11 @@ const HeroText = styled.h1`
   text-align: center;
   font-family: 'Borel', cursive;
   color: rgb(238, 74, 74);
+  text-shadow: 2px 2px rgba(0,0,0,1);
   margin-top: 0.4em;
 
   @media only screen and (max-width: 820px){
+    line-height: 1.2em;
     font-size: 3em;
   }
 `
@@ -78,6 +85,8 @@ const Step = styled.h2`
 `
 const P = styled.p`
   color: white;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-bottom: 1em;
 `
 const Input = styled.input`
