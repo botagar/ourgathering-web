@@ -36,8 +36,15 @@ const HomePage = styled(GlassPanel)`
   flex-direction: column;
   flex: 0 0 90vh;
   align-items: center;
-  margin: 1em 15vw;
+  margin: 1em 22vw;
   padding: 1em;
+
+  @media only screen and (max-width: 1080px){
+    margin: 1em 12vw;
+  }
+  @media only screen and (max-width: 820px){
+    margin: 1em 8vw;
+  }
 `
 const InstructionalStep = styled.div`
   display: flex;
@@ -45,26 +52,38 @@ const InstructionalStep = styled.div`
   align-items: center;
   margin-bottom: 2em;
   padding: 0.5em;
-  width: 60%;
-  background-color: white;
+  width: 80%;
+  background-color: rgba(0,0,0,0.5);
   border-radius: 5px;
   box-shadow: 5px 5px rgba(0,0,0,0.6);
+
+  @media only screen and (max-width: 820px){
+    width: 90%;
+  }
 `
 const HeroText = styled.h1`
-  font-size: 7em;
+  font-size: 4em;
   text-align: center;
+  font-family: 'Borel', cursive;
+  color: rgb(238, 74, 74);
+  margin-top: 0.4em;
+
+  @media only screen and (max-width: 820px){
+    font-size: 3em;
+  }
 `
 const Step = styled.h2`
+  color: white;
   margin-bottom: 0.3em;
 `
 const P = styled.p`
-  font-weight: bold;
+  color: white;
   margin-bottom: 1em;
 `
 const Input = styled.input`
-  width: 50%;
-  min-width: 400px;
-  height: 30px;
+  width: 75%;
+  min-width: 200px;
+  height: 40px;
   margin-bottom: 1em;
   font-size: 1em;
   border-radius: 5px;
@@ -72,10 +91,14 @@ const Input = styled.input`
   &::placeholder {
     font-style: italic;
   }
+
+  @media only screen and (max-width: 820px){
+    width: 90%;
+  }
 `
 const Register = styled.button`
   width: 30%;
-  min-width: 80px;
+  min-width: 150px;
   height: 40px;
   text-align: center;
   border: 2px solid rgb(15, 115, 12);

@@ -1,8 +1,9 @@
 import { FC, ReactElement } from 'react'
 import { createGlobalStyle, css } from 'styled-components'
+import { Reset } from 'styled-reset'
 
 import montserrat from '../../static/fonts/en/Montserrat/Montserrat-VariableFont_wght.ttf'
-import { Reset } from 'styled-reset'
+import borel from '../../static/fonts/en/Borel/Borel-Regular.ttf'
 
 const AppStyles: FC = (): ReactElement => {
   return (
@@ -17,8 +18,10 @@ const fontFaces = css`
     @font-face {
       font-family: 'Montserrat';
       src: url('${montserrat}');
-      font-weight: normal;
-      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Borel';
+      src: url('${borel}');
     }
 `
 
