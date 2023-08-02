@@ -8,6 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "cross-env NO_SSR=true PUBLIC_URL='/ourgathering-web/' webpack --mode production",
+    "build:ci": "webpack --mode production",
     "serve": "cross-env NO_SSR=true webpack serve --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
