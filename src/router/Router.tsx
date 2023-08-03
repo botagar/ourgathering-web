@@ -11,7 +11,7 @@ const TmpElement: FC = (): ReactElement => <h1>Hello</h1>
 const AsyncHelp = loadable(
   async () =>
     await import(
-      /* webpackChunkName: "async-pages" */ 'pages'
+      /* webpackChunkName: "async-pages", webpackPrefetch: true */ 'pages'
     ),
   {
     resolveComponent: (components) => components.Help,
