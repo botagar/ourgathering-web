@@ -1,10 +1,23 @@
 import { RouteObject } from 'react-router-dom'
 
 import { FC, ReactElement } from 'react'
-import { Help, Home, ManageGatherings } from 'pages'
+import { Home, ManageGatherings } from 'pages'
 import { Gathering } from 'pages/gathering'
+import loadable from '@loadable/component'
 
 const TmpElement: FC = (): ReactElement => <h1>Hello</h1>
+
+// const AsyncHelp = loadable(async () => await import('pages'))
+const AsyncHelp = loadable(
+  async () =>
+    await import(
+      /* webpackChunkName: "async-pages" */ 'pages'
+    ),
+  {
+    resolveComponent: (components) => components.Help,
+    fallback: <h1>Waiting...</h1>
+  }
+)
 
 const routes: RouteObject[] = [
   {
@@ -17,7 +30,7 @@ const routes: RouteObject[] = [
   },
   {
     path: '/help',
-    element: <Help />
+    element: <AsyncHelp />
   },
   {
     path: '/manage/:ownerId/:authToken',
