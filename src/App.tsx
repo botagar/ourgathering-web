@@ -2,7 +2,8 @@ import { AppStyles, ErrorBoundary, Footer, Header, LanguagePickerBar } from 'com
 import { FC, ReactElement } from 'react'
 import { useRoutes } from 'react-router-dom'
 import { routes } from 'router/Router'
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
+import { Themes } from 'components/app-styles/Themes'
 
 import background from './static/backgrounds/night_full_moon.png'
 
@@ -11,14 +12,14 @@ const App: FC = (): ReactElement => {
 
   return (
     <ErrorBoundary>
-      <ThemeProvider theme={{}}>
+      <Themes>
         <AppStyles />
         <AppContainer>
           <HeaderRow />
           {page}
           <Footer />
         </AppContainer>
-      </ThemeProvider>
+      </Themes>
     </ErrorBoundary>
   )
 }

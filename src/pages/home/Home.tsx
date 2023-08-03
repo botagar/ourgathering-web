@@ -1,13 +1,15 @@
 /* eslint-disable react/jsx-pascal-case */
-import { FC, ReactElement } from 'react'
+import { FC, ReactElement, useContext } from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
+import { ColorThemes, ThemePreferenceContext } from 'components/app-styles/Themes'
+import { GlassPanel } from 'components/generic/GlassPanel'
 
 import DownChevronImage from 'src/static/down_chevron.png'
-import { GlassPanel } from 'components/generic/GlassPanel'
 
 const Home: FC = (): ReactElement => {
   const { t } = useTranslation()
+  const { setCurrentColorTheme } = useContext(ThemePreferenceContext)
 
   return (
     <HomePage>
@@ -16,7 +18,7 @@ const Home: FC = (): ReactElement => {
         <Step>{t('home:step_1')}</Step>
         <P>{t('home:step_1_instruction')}</P>
         <Input type='email' placeholder={t('home:step_1_input_placeholder')} />
-        <Register><h4>{t('home:step_1_register')}</h4></Register>
+        <Register onClick={() => setCurrentColorTheme(ColorThemes.DARK)}><h4>{t('home:step_1_register')}</h4></Register>
       </InstructionalStep>
       <DownChevron src={DownChevronImage} />
       <InstructionalStep>

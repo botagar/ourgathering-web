@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-// import { HashRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { loadableReady } from '@loadable/component'
 
@@ -28,9 +27,7 @@ const indexJSX = (
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter basename={PUBLIC_URL}>
-        {/* <HashRouter> */}
         <App />
-        {/* </HashRouter> */}
       </BrowserRouter>
     </HelmetProvider>
   </StrictMode>
