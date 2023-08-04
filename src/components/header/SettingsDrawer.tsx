@@ -1,8 +1,9 @@
 import { AU, FlagComponent, US } from 'country-flag-icons/react/3x2'
-import { FC, PropsWithChildren, ReactElement, useEffect, useRef, useState } from 'react'
+import { FC, PropsWithChildren, ReactElement, useContext, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 import Cog from 'src/static/cog.png'
+import { ThemePreferenceContext } from 'components/app-styles/Themes'
 
 const createPortalRoot = (): HTMLDivElement => {
   const drawerRoot = document.createElement('div')
@@ -18,6 +19,8 @@ interface SettingsDrawerProps extends PropsWithChildren {
 }
 
 const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen }): ReactElement => {
+  const { currentColorTheme } = useContext(ThemePreferenceContext)
+
   const bodyRef = useRef(document.querySelector('body'))
   const portalRootRef = useRef(document.getElementById('settings-drawer-root') ?? createPortalRoot())
 
@@ -61,7 +64,7 @@ const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen }): ReactEle
           {tempUSA}
         </ContentArea>
         <DisplayRow>
-          {FlagIcon(AU, { title: 'English', selected: true })} EN
+          {FlagIcon(AU, { title: 'English', selected: true })} EN | { currentColorTheme }
         </DisplayRow>
         <DrawerTab onClick={() => {
           console.log('Toggling drawer state to ', !drawerIsOpen)
