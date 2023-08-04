@@ -1,9 +1,10 @@
-import { AppStyles, ErrorBoundary, Footer, Header, LanguagePickerBar } from 'components'
+import { AppStyles, ErrorBoundary, Footer, Header } from 'components'
 import { FC, ReactElement } from 'react'
 import { useRoutes } from 'react-router-dom'
 import { routes } from 'router/Router'
 import styled from 'styled-components'
 import { Themes } from 'components/app-styles/Themes'
+import { SettingsDrawer } from 'components/header/SettingsDrawer'
 
 import background from './static/backgrounds/night_full_moon.png'
 
@@ -15,6 +16,7 @@ const App: FC = (): ReactElement => {
       <Themes>
         <AppStyles />
         <AppContainer>
+          <SettingsDrawer isOpen={false} className='' onClose={() => console.log('Closing')} />
           <HeaderRow />
           {page}
           <Footer />
@@ -26,7 +28,7 @@ const App: FC = (): ReactElement => {
 
 const HeaderRow: FC = (): ReactElement =>
   <HeaderContainer>
-    <LanguagePickerBar />
+    {/* <LanguagePickerBar /> */}
     <Header />
   </HeaderContainer>
 

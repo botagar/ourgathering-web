@@ -7,7 +7,7 @@ import { NavBar } from './NavBar'
 
 const Header: FC = (): ReactElement => {
   return (
-    <HeaderRow aria-role='Banner'>
+    <HeaderRow>
       <LogoLink to='/'>
         <Logo src={LogoImage} alt='logo' />
       </LogoLink>
