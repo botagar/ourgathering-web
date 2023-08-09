@@ -18,7 +18,7 @@ const GlassPane = styled.div`
     position: relative;
     padding: 10px;
     background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(20px);
+    // backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,0.5);
     border-bottom: 1px solid rgba(255,255,255,0.2);
     border-radius: 20px;

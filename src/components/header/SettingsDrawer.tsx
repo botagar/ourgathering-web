@@ -37,19 +37,6 @@ const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen }): ReactEle
     }
   }, [])
 
-  useEffect(() => {
-    const updatePageScroll = (): void => {
-      if (bodyRef.current == null) return
-      if (drawerIsOpen) {
-        // bodyRef.current.style.overflow = 'hidden'
-      } else {
-        bodyRef.current.style.overflow = ''
-      }
-    }
-
-    updatePageScroll()
-  }, [drawerIsOpen])
-
   const tempUSA = FlagIcon(US, { title: 'English', disabled: true })
 
   return (
@@ -64,7 +51,7 @@ const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen }): ReactEle
           {tempUSA}
         </ContentArea>
         <DisplayRow>
-          {FlagIcon(AU, { title: 'English', selected: true })} EN | { currentColorTheme }
+          {FlagIcon(AU, { title: 'English', selected: false })} EN | { currentColorTheme }
         </DisplayRow>
         <DrawerTab onClick={() => {
           console.log('Toggling drawer state to ', !drawerIsOpen)
@@ -104,7 +91,7 @@ const ContentArea = styled.div`
 `
 const DisplayRow = styled.div`
   position: fixed;
-  bottom: -30px;
+  bottom: -28px;
   right: 0;
   min-width: 200px;
   background: black;
