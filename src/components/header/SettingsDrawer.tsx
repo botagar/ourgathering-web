@@ -1,9 +1,13 @@
-import { AU, FlagComponent, US } from 'country-flag-icons/react/3x2'
+import { AU, US } from 'country-flag-icons/react/3x2'
 import { FC, PropsWithChildren, ReactElement, useContext, useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
-import Cog from 'src/static/cog.png'
 import { ThemePreferenceContext } from 'components/app-styles/Themes'
+import { FlagIcon } from 'components/generic/CountryFlag'
+
+import Cog from 'src/static/cog.png'
+import Sun from 'src/static/sun.png'
 
 const createPortalRoot = (): HTMLDivElement => {
   const drawerRoot = document.createElement('div')
@@ -18,7 +22,10 @@ interface SettingsDrawerProps extends PropsWithChildren {
   onClose: Function
 }
 
-const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen }): ReactElement => {
+const tempUSA = FlagIcon(US, { title: 'English', disabled: true })
+
+const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen, onClose }): ReactElement => {
+  const { i18n } = useTranslation()
   const { currentColorTheme } = useContext(ThemePreferenceContext)
 
   const bodyRef = useRef(document.querySelector('body'))
@@ -37,7 +44,6 @@ const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen }): ReactEle
     }
   }, [])
 
-  const tempUSA = FlagIcon(US, { title: 'English', disabled: true })
 
   return (
     <DrawerContainer aria-hidden={drawerIsOpen ? 'false' : 'true'}>
@@ -50,18 +56,25 @@ const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen }): ReactEle
           {tempUSA}
           {tempUSA}
         </ContentArea>
-        <DisplayRow>
-          {FlagIcon(AU, { title: 'English', selected: false })} EN | { currentColorTheme }
-        </DisplayRow>
-        <DrawerTab onClick={() => {
+        <ActiveSettings onClick={() => {
           console.log('Toggling drawer state to ', !drawerIsOpen)
           setDrawerIsOpen(!drawerIsOpen)
-        }}
-        >
-          <Icon src={Cog} />
-        </DrawerTab>
+        }}>
+          <ActiveSettingElement>
+            {FlagIcon(AU, { title: 'English', selected: false })} <p>{i18n.language}</p>
+          </ActiveSettingElement>
+          <ActiveSettingElement>
+            <Icon src={Sun} /> { currentColorTheme }
+          </ActiveSettingElement>
+          <ActiveSettingElement>
+            <Icon src={Cog} />
+          </ActiveSettingElement>
+        </ActiveSettings>
       </Drawer>
-      <Backdrop />
+      { drawerIsOpen ? <Backdrop onClick={() => {
+        setDrawerIsOpen(false)
+        onClose()
+      }} /> : <></> }
     </DrawerContainer>
   )
 }
@@ -85,32 +98,52 @@ const Drawer = styled.div<{ isOpen: boolean }>`
   `}
 `
 const ContentArea = styled.div`
-  padding: 5px 10px;
   display: flex;
   justify-content: space-between;
+  padding: 5px 10px;
 `
-const DisplayRow = styled.div`
+const ActiveSettings = styled.div`
   position: fixed;
-  bottom: -28px;
+  bottom: -30px;
   right: 0;
-  min-width: 200px;
+  height: 30px;
+  border-left: 1px solid rgba(255,255,255,0.5);
+  border-bottom-left-radius: 5px;
   background: black;
   color: white;
+  display: flex;
+
+  &:hover {
+    box-shadow: 0 2px 5px rgba(255,255,255,1);
+  }
 `
-const DrawerTab = styled.button`
-  background: grey;
-  width: 100px;
-  height: 20px;
-  z-index: 1001;
-  position: fixed;
-  bottom: -50px;
-  right: 0;
-  padding: 0;
-  border: none;
-  border-bottom: 1px solid white;
+const ActiveSettingElement = styled.div`
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  &:after {
+    content: '';
+    border-right: 1px solid rgba(255,255,255,0.7);
+    height: 65%;
+    padding-left: 5px;
+  }
+  &:last-child {
+    padding-right: 5px;
+  }
+  &:last-child:after {
+    display: none;
+  }
 `
 const Backdrop = styled.div`
-  
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.7);
 `
 const Icon = styled.img`
   display: inline;
@@ -121,25 +154,10 @@ const Icon = styled.img`
   filter: invert(100%);
 `
 
-interface FlagIconProps {
-  title: string
-  selected?: boolean
-  disabled?: boolean
-}
-const FlagIcon = (flag: FlagComponent, { title, selected, disabled }: FlagIconProps): ReactElement => {
-  const SizedFlag = styled(flag)<{ selected: boolean, disabled: boolean }>`
-  width: 2em;
-  opacity: ${props => props.disabled ? 0.4 : 1.0};
-  ${({ selected }) => selected && `
-    border: 1px solid gold;
-  `}
-`
-  return <SizedFlag title={title} selected={selected ?? false} disabled={disabled ?? false} />
-}
-
 export {
   SettingsDrawer
 }
+
 export type {
   SettingsDrawerProps
 }
