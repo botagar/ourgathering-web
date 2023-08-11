@@ -1,4 +1,4 @@
-import { AU, US } from 'country-flag-icons/react/3x2'
+import { GB } from 'country-flag-icons/react/3x2'
 import { FC, PropsWithChildren, ReactElement, useContext, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
@@ -21,8 +21,6 @@ interface SettingsDrawerProps extends PropsWithChildren {
   className: string
   onClose: Function
 }
-
-const tempUSA = FlagIcon(US, { title: 'English', disabled: true })
 
 const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen, onClose }): ReactElement => {
   const { i18n } = useTranslation()
@@ -50,18 +48,13 @@ const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen, onClose }):
       <Drawer isOpen={drawerIsOpen}>
         <ContentArea>
           {children}
-          {tempUSA}
-          {tempUSA}
-          {tempUSA}
-          {tempUSA}
-          {tempUSA}
         </ContentArea>
         <ActiveSettings onClick={() => {
           console.log('Toggling drawer state to ', !drawerIsOpen)
           setDrawerIsOpen(!drawerIsOpen)
         }}>
           <ActiveSettingElement>
-            {FlagIcon(AU, { title: 'English', selected: false })} <p>{i18n.language}</p>
+            {FlagIcon(GB, { title: 'English', selected: false })} <p>{i18n.language}</p>
           </ActiveSettingElement>
           <ActiveSettingElement>
             <Icon src={Sun} /> { currentColorTheme }
@@ -84,10 +77,12 @@ const DrawerContainer = styled.div`
 `
 const Drawer = styled.div<{ isOpen: boolean }>`
   background: #fff;
-  min-width: 200px;
+  min-width: 150px;
   position: fixed;
   top: 0;
   right: 0;
+  padding-left: 5px;
+  padding-right: 5px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
   transition: transform var(--transition-speed) ease;
   z-index: 1000;
@@ -100,25 +95,26 @@ const Drawer = styled.div<{ isOpen: boolean }>`
 const ContentArea = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  flex-direction: column;
 `
 const ActiveSettings = styled.div`
   position: fixed;
   bottom: -30px;
   right: 0;
   height: 30px;
+  min-width: 150px;
   border-left: 1px solid rgba(255,255,255,0.5);
   border-bottom-left-radius: 5px;
   background: black;
   color: white;
   display: flex;
+  padding: 0 5px;
 
   &:hover {
     box-shadow: 0 2px 5px rgba(255,255,255,1);
   }
 `
 const ActiveSettingElement = styled.div`
-  padding-left: 5px;
   display: flex;
   align-items: center;
   gap: 3px;
@@ -127,7 +123,8 @@ const ActiveSettingElement = styled.div`
     content: '';
     border-right: 1px solid rgba(255,255,255,0.7);
     height: 65%;
-    padding-left: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   &:last-child {
     padding-right: 5px;

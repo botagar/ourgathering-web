@@ -7,6 +7,11 @@ import { Themes } from 'components/app-styles/Themes'
 import { SettingsDrawer } from 'components/header/SettingsDrawer'
 
 import background from './static/backgrounds/night_full_moon.png'
+import { US } from 'country-flag-icons/react/3x2'
+import { FlagIcon } from 'components/generic/CountryFlag'
+import { ToggleSwitch } from 'components/generic/ToggleSwitch'
+
+const tempUSA = FlagIcon(US, { title: 'English', disabled: true })
 
 const App: FC = (): ReactElement => {
   const page = useRoutes(routes)
@@ -16,7 +21,10 @@ const App: FC = (): ReactElement => {
       <Themes>
         <AppStyles />
         <AppContainer>
-          <SettingsDrawer isOpen={false} className='' onClose={() => console.log('Closing')} />
+          <SettingsDrawer isOpen={false} className='' onClose={() => console.log('Closing')}>
+            <LanguagePicker>{tempUSA}</LanguagePicker>
+            <ThemePicker><p>Dark</p><ToggleSwitch /><p>Light</p></ThemePicker>
+          </SettingsDrawer>
           <HeaderRow />
           {page}
           <Footer />
@@ -25,6 +33,16 @@ const App: FC = (): ReactElement => {
     </ErrorBoundary>
   )
 }
+
+const LanguagePicker = styled.div`
+  width: 100%;
+`
+const ThemePicker = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+`
 
 const HeaderRow: FC = (): ReactElement =>
   <HeaderContainer>
@@ -39,7 +57,7 @@ const AppContainer = styled.div`
   overflow: hidden;
   justify-content: space-between;
 
-  background: url(${background}) no-repeat center center fixed;
+  // background: url(${background}) no-repeat center center fixed;
   background-size: cover;
 `
 const HeaderContainer = styled.header`
