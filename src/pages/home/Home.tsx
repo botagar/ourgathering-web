@@ -14,7 +14,7 @@ const Home: FC = (): ReactElement => {
   return (
     <HomePage>
       <HeroText>{t('home:hero_text')}</HeroText>
-      <InstructionalStep>
+      {/* <InstructionalStep>
         <Step>{t('home:step_1')}</Step>
         <P>{t('home:step_1_instruction')}</P>
         <Input type='email' placeholder={t('home:step_1_input_placeholder')} />
@@ -29,7 +29,7 @@ const Home: FC = (): ReactElement => {
       <InstructionalStep>
         <Step>{t('home:step_3')}</Step>
         <P>{t('home:step_3_instruction')}</P>
-      </InstructionalStep>
+      </InstructionalStep> */}
     </HomePage>
   )
 }

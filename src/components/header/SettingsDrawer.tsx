@@ -8,6 +8,7 @@ import { FlagIcon } from 'components/generic/CountryFlag'
 
 import Cog from 'src/static/cog.png'
 import Sun from 'src/static/sun.png'
+import { createPortal } from 'react-dom'
 
 const createPortalRoot = (): HTMLDivElement => {
   const drawerRoot = document.createElement('div')
@@ -42,8 +43,7 @@ const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen, onClose }):
     }
   }, [])
 
-
-  return (
+  return createPortal(
     <DrawerContainer aria-hidden={drawerIsOpen ? 'false' : 'true'}>
       <Drawer isOpen={drawerIsOpen}>
         <ContentArea>
@@ -52,23 +52,28 @@ const SettingsDrawer: FC<SettingsDrawerProps> = ({ children, isOpen, onClose }):
         <ActiveSettings onClick={() => {
           console.log('Toggling drawer state to ', !drawerIsOpen)
           setDrawerIsOpen(!drawerIsOpen)
-        }}>
+        }}
+        >
           <ActiveSettingElement>
             {FlagIcon(GB, { title: 'English', selected: false })} <p>{i18n.language}</p>
           </ActiveSettingElement>
           <ActiveSettingElement>
-            <Icon src={Sun} /> { currentColorTheme }
+            <Icon src={Sun} /> {currentColorTheme}
           </ActiveSettingElement>
           <ActiveSettingElement>
             <Icon src={Cog} />
           </ActiveSettingElement>
         </ActiveSettings>
       </Drawer>
-      { drawerIsOpen ? <Backdrop onClick={() => {
-        setDrawerIsOpen(false)
-        onClose()
-      }} /> : <></> }
-    </DrawerContainer>
+      {drawerIsOpen
+        ? <Backdrop onClick={() => {
+          setDrawerIsOpen(false)
+          onClose()
+        }}
+          />
+        : <></>}
+    </DrawerContainer>,
+    portalRootRef.current
   )
 }
 
@@ -85,7 +90,7 @@ const Drawer = styled.div<{ isOpen: boolean }>`
   padding-right: 5px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
   transition: transform var(--transition-speed) ease;
-  z-index: 1000;
+  z-index: 1;
   transform: translateY(-100%);
 
   ${({ isOpen }) => isOpen && `
@@ -139,7 +144,6 @@ const Backdrop = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
   background-color: rgba(0,0,0,0.7);
 `
 const Icon = styled.img`

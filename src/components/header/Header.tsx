@@ -2,14 +2,13 @@ import { FC, ReactElement } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import LogoImage from 'src/static/logo.jpg'
 import { NavBar } from './NavBar'
 
 const Header: FC = (): ReactElement => {
   return (
     <HeaderRow>
       <LogoLink to='/'>
-        <Logo src={LogoImage} alt='logo' />
+        <LogoText>OG</LogoText>
       </LogoLink>
       <NavBar />
     </HeaderRow>
@@ -22,16 +21,22 @@ const HeaderRow = styled.div`
 
   @media only screen and (max-width: 820px){}
 `
-const Logo = styled.img`
-  display: block;
-  max-width: 230px;
-  max-height: 230px;
-  width: auto;
-  height: auto;
+const LogoText = styled.h1`
+  font-size: 4em;
+  text-align: center;
+  font-family: 'Borel', cursive;
+  color: rgb(238, 74, 74);
+  text-shadow: 2px 2px rgba(0,0,0,1);
+  margin-top: 15px;
+
+  @media only screen and (${({ theme }) => theme.screenBreaks.phone}) {
+    line-height: 1.2em;
+    font-size: 3em;
+  }
 `
 const LogoLink = styled(Link)`
   display: flex;
-  width: 85px;
+  text-decoration: none;
 `
 
 export { Header }

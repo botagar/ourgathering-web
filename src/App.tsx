@@ -20,11 +20,11 @@ const App: FC = (): ReactElement => {
     <ErrorBoundary>
       <Themes>
         <AppStyles />
+        <SettingsDrawer isOpen={false} className='' onClose={() => console.log('Closing')}>
+          <LanguagePicker>{tempUSA}</LanguagePicker>
+          <ThemePicker><p>Dark</p><ToggleSwitch /><p>Light</p></ThemePicker>
+        </SettingsDrawer>
         <AppContainer>
-          <SettingsDrawer isOpen={false} className='' onClose={() => console.log('Closing')}>
-            <LanguagePicker>{tempUSA}</LanguagePicker>
-            <ThemePicker><p>Dark</p><ToggleSwitch /><p>Light</p></ThemePicker>
-          </SettingsDrawer>
           <HeaderRow />
           {page}
           <Footer />
@@ -55,7 +55,7 @@ const AppContainer = styled.div`
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   // background: url(${background}) no-repeat center center fixed;
   background-size: cover;

@@ -1,5 +1,5 @@
 import { Dispatch, FC, PropsWithChildren, ReactElement, SetStateAction, createContext, useEffect, useState } from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ColorTheme, DefaultTheme, ThemeProvider } from 'styled-components'
 
 enum ColorThemes {
   LIGHT = 'light',
@@ -29,12 +29,16 @@ const Themes: FC<PropsWithChildren> = ({ children }): ReactElement => {
     }
   }
   const colorThemes = {
-    light: {},
-    dark: {}
+    light: {
+      bgColor1: 'white'
+    },
+    dark: {
+      bgColor1: 'black'
+    }
   }
-  const theme = {
+  const theme: DefaultTheme = {
     ...baseTheme,
-    colors: colorThemes[currentColorTheme]
+    colors: colorThemes[currentColorTheme] as ColorTheme
   }
 
   useEffect(() => {
